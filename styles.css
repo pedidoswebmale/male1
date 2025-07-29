@@ -80,7 +80,12 @@ h1 {
   font-weight: 600;
   transition: background 0.2s;
 }
-.qty-selector button:hover { background: var(--primary); color: var(--white); }
+
+.qty-selector button:hover { 
+  background: var(--primary); 
+  color: var(--white); 
+}
+
 .qty-selector input {
   width: 38px;
   text-align: center;
@@ -131,6 +136,51 @@ input[type=number] {
   text-align: center;
   color: #12633b;
   box-shadow: 0 2px 8px rgba(50,150,50,0.05);
+}
+
+/* Estilos para el Resumen del Pedido */
+#resumenPedido {
+  background: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 1.5rem;
+}
+
+#resumenPedido h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#resumenPedido ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#resumenPedido li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: var(--primary);
+}
+
+#resumenPedido button {
+  width: 48%;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.8rem 0;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.15s;
+}
+
+#resumenPedido button:hover {
+  background: var(--accent);
+  color: var(--primary);
 }
 
 .hidden { display: none; }
