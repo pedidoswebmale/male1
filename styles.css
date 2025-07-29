@@ -1,0 +1,147 @@
+:root {
+  --primary: #22223b;
+  --secondary: #f2e9e4;
+  --accent: #c9ada7;
+  --white: #fff;
+  --radius: 18px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: var(--secondary);
+  color: var(--primary);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.5rem 0.75rem 3rem 0.75rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.item-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.6rem 0.4rem 0.8rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.3rem;
+  border: 2px solid var(--accent);
+}
+
+.item-card span {
+  margin: 0.15rem 0 0.3rem 0;
+  font-size: 1.08rem;
+  text-align: center;
+}
+
+.qty-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.qty-selector button {
+  width: 28px;
+  height: 28px;
+  background: var(--accent);
+  border: none;
+  color: var(--primary);
+  font-size: 1.1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.qty-selector button:hover { background: var(--primary); color: var(--white); }
+.qty-selector input {
+  width: 38px;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  background: #f9f6f2;
+  outline: none;
+  margin: 0 2px;
+}
+
+/* Quitar flechas de los inputs number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  margin-top: 1.3rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.15s;
+}
+
+.submit-btn:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+#mensajeEnviado {
+  margin-top: 2rem;
+  background: #d8f3dc;
+  border-radius: 15px;
+  padding: 1.3rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #12633b;
+  box-shadow: 0 2px 8px rgba(50,150,50,0.05);
+}
+
+.hidden { display: none; }
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    max-width: 98vw;
+    padding: 0.7rem 0.1rem 2rem 0.1rem;
+  }
+  h1 { font-size: 1.5rem; }
+}
